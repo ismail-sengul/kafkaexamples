@@ -9,7 +9,7 @@ import java.util.Properties;
 
 public class ProducerDemoWithCallback {
 
-    private static Logger logger = LoggerFactory.getLogger(ProducerDemoWithCallback.class.getSimpleName());
+    private static final Logger logger = LoggerFactory.getLogger(ProducerDemoWithCallback.class.getSimpleName());
 
     public static void main(String[] args) {
 

@@ -10,7 +10,7 @@ import java.util.Properties;
 
 public class ProducerDemo {
 
-    private static Logger logger = LoggerFactory.getLogger(ProducerDemo.class.getSimpleName());
+    private static final Logger logger = LoggerFactory.getLogger(ProducerDemo.class.getSimpleName());
 
     public static void main(String[] args) {
 

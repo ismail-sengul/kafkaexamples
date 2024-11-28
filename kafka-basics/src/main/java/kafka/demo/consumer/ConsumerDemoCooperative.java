@@ -14,7 +14,7 @@ import java.util.Properties;
 
 public class ConsumerDemoCooperative {
 
-    private static Logger logger = LoggerFactory.getLogger(ConsumerDemoCooperative.class.getSimpleName());
+    private static final Logger logger = LoggerFactory.getLogger(ConsumerDemoCooperative.class.getSimpleName());
 
     public static void main(String[] args) {
 

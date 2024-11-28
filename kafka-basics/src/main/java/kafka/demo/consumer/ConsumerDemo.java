@@ -13,7 +13,7 @@ import java.util.Properties;
 
 public class ConsumerDemo {
 
-    private static Logger logger = LoggerFactory.getLogger(ConsumerDemo.class.getSimpleName());
+    private static final Logger logger = LoggerFactory.getLogger(ConsumerDemo.class.getSimpleName());
 
     public static void main(String[] args) {
 

@@ -14,7 +14,7 @@ import java.util.Properties;
 
 public class ConsumerDemoWithShutdown {
 
-    private static Logger logger = LoggerFactory.getLogger(ConsumerDemoWithShutdown.class.getSimpleName());
+    private static final Logger logger = LoggerFactory.getLogger(ConsumerDemoWithShutdown.class.getSimpleName());
 
     public static void main(String[] args) {
 
