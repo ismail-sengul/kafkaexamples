@@ -20,6 +20,9 @@
           </set>
         </option>
       </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/kafka-producer-wikimedia" />
+      </GradleProjectSettings>
     </option>
   </component>
 </project>
