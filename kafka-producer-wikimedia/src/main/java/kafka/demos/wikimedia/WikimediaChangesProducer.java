@@ -22,14 +22,20 @@ public class WikimediaChangesProducer {
         producerProperties.setProperty(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
         producerProperties.setProperty(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
 
+
+        // Set High Throughput Producer Configs
+        producerProperties.setProperty(ProducerConfig.LINGER_MS_CONFIG, "20");
+        producerProperties.setProperty(ProducerConfig.BATCH_SIZE_CONFIG, Integer.toString(32 * 1024));
+        producerProperties.setProperty(ProducerConfig.COMPRESSION_TYPE_CONFIG,"snappy");
+
         // Create the Producer
-        KafkaProducer<String,String> producer = new KafkaProducer<>(producerProperties);
+        KafkaProducer<String, String> producer = new KafkaProducer<>(producerProperties);
 
         String topic = "wikimedia.recentchange";
 
-        EventHandler eventHandler = new WikimediaChangeHandler(producer,topic);
+        EventHandler eventHandler = new WikimediaChangeHandler(producer, topic);
         String url = "https://stream.wikimedia.org/v2/stream/recentchange";
-        EventSource.Builder builder = new EventSource.Builder(eventHandler,URI.create(url));
+        EventSource.Builder builder = new EventSource.Builder(eventHandler, URI.create(url));
         EventSource eventSource = builder.build();
 
         //start the producer in another thread
