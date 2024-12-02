@@ -1,0 +1,20 @@
+version: '3.7'
+
+services:
+  opensearch-for-kafka:
+    image: opensearchproject/opensearch:1.2.4
+    environment:
+      discovery.type: true
+      plugins.security.disabled: true # disable https and login
+      compatibility.override_main_response_version: true
+    ports:
+      - 9200:9200
+      - 9600:9600
+
+  opensearch-dashboard-for-kafka:
+    image: opensearchproject/opensearch-dashboard:1.2.0
+    ports:
+      - 5601:5601
+    environment:
+      OPENSEARCH_HOSTS: '["http://opensearch:9200"]'
+      DISABLE_SECURITY_DASHBOARD_PLUGIN: "true"
