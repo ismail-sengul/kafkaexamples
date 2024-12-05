@@ -39,6 +39,14 @@
           </set>
         </option>
       </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/kafka-with-spring-boot" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/kafka-with-spring-boot" />
+          </set>
+        </option>
+      </GradleProjectSettings>
     </option>
   </component>
 </project>

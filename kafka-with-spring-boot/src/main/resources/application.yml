@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: kafka-with-spring-boot
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      topic: test-topic
+    consumer:
+      group-id: consumer-group
+
+server:
+  port: 7070
+  error:
+    whitelabel:
+      enabled: true
+  servlet:
+    context-path: /
